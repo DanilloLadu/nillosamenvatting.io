@@ -1,0 +1,17 @@
+site_name: Samenvatting Jef Rpg
+nav:
+    - Home: 'index.md'
+    - 'Rpg':
+        - 'Informatie': 'rpg.md'
+        - 'Example': 'rpgExample.md'
+    - Jef:
+        - 'License': 'license.md'
+        - 'Release Notes': 'release-notes.md'
+theme:
+  name: material
+  palette:
+      primary: light green
+      scheme: slate
+      accent: orange
+  icon:
+    logo: octicons/squirrel-16
