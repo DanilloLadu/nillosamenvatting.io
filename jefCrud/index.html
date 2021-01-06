@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Create Update Edit Delete - Samenvatting Jef Rpg</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/purebasic.min.css">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">Samenvatting Jef Rpg</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Rpg <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../rpg/" class="dropdown-item">Informatie</a>
+</li>
+                                    
+<li>
+    <a href="../rpgExample/" class="dropdown-item">Example</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Jef <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../jefViewOnly/" class="dropdown-item">View only</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Create Update Edit Delete</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../jefViewOnly/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#jef-create-update-edit-delete" class="nav-link">Jef -  Create Update Edit Delete</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link"></a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#1-update-programma" class="nav-link">1: Update programma</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#2-dataset-opstellen-van-resolver" class="nav-link">2: DataSet Opstellen van Resolver</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#3-rysync-programma" class="nav-link">3: Rysync programma</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#4-providers-toevoegen-aan-datalogic" class="nav-link">4: Providers toevoegen aan DataLogic</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#5-adapters-en-events-toevoegen-aan-function" class="nav-link">5: Adapters en events toevoegen aan Function</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#6-update-class" class="nav-link">6: Update class</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="jef-create-update-edit-delete">Jef -  Create Update Edit Delete</h1>
+<table>
+<thead>
+<tr>
+<th>Applsrv.programs</th>
+<th>Applsrv.desktop.functions</th>
+<th>Desktop.functions</th>
+<th>Common</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Programs</code> - Programma/Colom Omschrijving</td>
+<td><code>DataLogic</code> - Provider Service AS400 en andere services</td>
+<td><code>MainPanel</code> GUI</td>
+<td><code>Constante</code></td>
+</tr>
+<tr>
+<td><code>df</code> - DataFormatter</td>
+<td><code>Function</code> - Main classe bij het opstarten (DI) Adapters resolver crud events</td>
+<td><code>Search</code>, <code>Update</code>,  <code>Insert</code></td>
+<td><code>Attribute</code></td>
+</tr>
+<tr>
+<td><code>rm</code> - Resolve method</td>
+<td></td>
+<td></td>
+<td><code>TranslationTable</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_1"></h2>
+<h2 id="1-update-programma">1: Update programma</h2>
+<ul>
+<li>!!!!!JUISTE NAAM</li>
+<li>extends ProgramDescription</li>
+<li>record opstellen (Type, key_version, dataset)</li>
+<li>key versie mee geven zie rpg</li>
+<li>Dataset is onze formatter</li>
+</ul>
+<pre><code class="language-java">public class EXORDHDR01 extends ProgramDescription {
+
+    private static final int KEY_VERSION = 1;
+
+    public EXORDHDR01() {
+        // keyRecord, AS400DataSet dataRecord type
+        super(RESOLVER, EXORDHDR01::keyRecord, EXORDHDRR1::record);
+        // Auto-generated constructor stub
+    }
+
+    private static AS400DataSet keyRecord() {
+        return AS400DataSet.builder(KEY_VERSION).with(new WMSCompany(), new Order()).build(); 
+    }
+}
+</code></pre>
+<h2 id="2-dataset-opstellen-van-resolver">2: DataSet Opstellen van Resolver</h2>
+<ul>
+<li>Static AS400DataSet </li>
+<li>builder verwacht onze data version key van rpg + alle atributen aan onze rpg kant</li>
+</ul>
+<pre><code class="language-java">public final class EXORDHDRR1 {
+
+    private static final int RECORD_VERSION = 1;
+
+    private EXORDHDRR1() {
+        // Utility class
+    }
+
+    public static AS400DataSet record() {
+        return builder(RECORD_VERSION).with(new Order(), new OrderDate(), new DeliveryDate(),
+                new Carrier().makeRequired(false), new OrderStatus(), new IsRushOrder()).build();
+    }
+
+}
+</code></pre>
+<h2 id="3-rysync-programma">3: Rysync programma</h2>
+<ul>
+<li>!!!!!JUISTE NAAM</li>
+<li>extends ProgramDescription</li>
+<li>record opstellen (Type, key_version, dataset)</li>
+<li>key versie mee geven zie rpg</li>
+<li>Dataset is onze formatter</li>
+</ul>
+<pre><code>public class EXORDHDR21 extends ProgramDescription {
+    private static final int KEY_VERSION = 1;
+    public EXORDHDR21() {
+        super(RESYNC, EXORDHDR21::keyRecord, EXORDHDRD1::dataSet002);
+    }
+    private static AS400DataSet keyRecord() {
+        return AS400DataSet.builder(KEY_VERSION)
+                .with(new WMSCompany(), new Order())
+                .build();
+    }
+}
+</code></pre>
+<h2 id="4-providers-toevoegen-aan-datalogic">4: Providers toevoegen aan DataLogic</h2>
+<ul>
+<li>provider toevoegen</li>
+<li>add master details</li>
+<li>voeg resolver toe</li>
+<li>en voeg functie toe getOrderResyncRow
+    om van het update een data record te vragen  na onze insert van de update</li>
+</ul>
+<pre><code class="language-java">// update order
+ Provider orderUpdate = new AS400Provider(this, UPDATE_DATATABLENAME, EXORDHDR01.class);
+ // voor de index row te vinden
+ orderUpdateOrderOrdinal = orderUpdate.getColumnOrdinal(Order.NAME);
+ // auto refresh alleen als je wit triggeren en niet automatishe
+ // allways refresh -&gt; geen parameter refresht die ook
+ addMasterDetailLink(orderList, orderUpdate, false);
+ addProvider(orderUpdate);
+ addResolver(orderUpdate.createResolver());
+
+ // resync
+ orderResync = new AS400Provider(this, RESYNCER_DATATABLENAME, EXORDHDR21.class);
+ // nodig voor update en delete , bij insert moeten we andere manier doen
+ addMasterDetailLink(orderUpdate, orderResync, false);
+ addProvider(orderResync);
+</code></pre>
+<pre><code class="language-java">Object[] getOrderResyncRow(Object[] orderUpdateRow) throws FunctionException {
+    orderResync.setParameter(Order.NAME, orderUpdateRow[orderUpdateOrderOrdinal]);
+    // call order provider
+    orderResync.refresh();
+    return orderResync.getCurrentRow();
+}
+</code></pre>
+<h2 id="5-adapters-en-events-toevoegen-aan-function">5: Adapters en events toevoegen aan Function</h2>
+<ul>
+<li>InsertEventAdapter InsertDFEA</li>
+<li>UpdateEventAdapter UpdateDFEA</li>
+<li>DeleteDFEA</li>
+<li>toevoegen aan one function</li>
+</ul>
+<pre><code class="language-java">    adapters.add(new InsertEventAdapter(orderUpdate, orderResolver, orderList));
+    // update
+    adapters.add(new UpdateEventAdapter(orderUpdate, orderResolver, orderList));
+    // delete
+    adapters.add(new DeleteDFEA(orderUpdate, orderResolver, orderList, deriveUIName(UPDATE_PANELNAME)));
+
+
+
+private final class InsertEventAdapter extends InsertDFEA {
+
+    private InsertEventAdapter(Provider provider, Resolver resolver, Provider masterProvider) {
+        super(provider, resolver, masterProvider, UPDATE_PANELNAME);
+    }
+
+    // van de update een datarecord vragen en voegt die toe aan die provider
+    // na onze insert via de update
+    // record toevoegen in onze resync provider -&gt; parameter
+    @Override
+    public Object[] getMasterRow(Object[] providerRow) throws FunctionException {
+        return getDataContext().getOrderResyncRow(providerRow);
+    }
+}
+
+private final class UpdateEventAdapter extends UpdateDFEA {
+
+    private UpdateEventAdapter(Provider provider, Resolver resolver, Provider masterProvider) {
+        super(provider, resolver, masterProvider, UPDATE_PANELNAME);
+    }
+
+    @Override
+    public Object[] getMasterRow(Object[] providerRow) throws FunctionException {
+        return getDataContext().getOrderResyncRow(providerRow);
+    }
+}
+</code></pre>
+<h2 id="6-update-class">6: Update class</h2>
+<ul>
+<li>Update extends StandardDialogPanel</li>
+<li>constructor met DialogType</li>
+<li>appendLabelAndComponent</li>
+</ul>
+<pre><code>@SuppressWarnings(&quot;serial&quot;)
+public final class Update extends StandardDialogPanel {
+    public Update(DialogType type) {
+        super(type);
+        Boolean readOnly = type == DELETE;
+        JefMigBuilder builder =
+                new JefMigBuilder(MigLayoutFactory.create(MigLayoutFactory.Type.ONE_DATA_COLUMN), UPDATE_DATATABLENAME);
+        builder.appendLabeledComponent(type == INSERT ? JEFTEXT : JEFLABEL, Order.NAME);
+        builder.appendLabeledComponent(readOnly ? JEFLABEL : JEFDATE, OrderDate.NAME);
+        builder.appendLabeledComponent(readOnly ? JEFLABEL : JEFDATE, DeliveryDate.NAME);
+        builder.appendLabeledComponent(readOnly ? JEFLABEL : JEFTEXT, Carrier.NAME);
+        builder.appendLabeledComponent(readOnly ? JEFLABEL : JEFCOMBOBOX, OrderStatus.NAME);
+        builder.appendLabeledComponent(JEFCHECKBOX, IsRushOrder.NAME).setEnabled(!readOnly);
+        add(builder.getJefPanel());
+    }
+}
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
