@@ -100,10 +100,6 @@
             
             <li class="nav-item" data-level="1"><a href="#jef-vieuw-only" class="nav-link">Jef - Vieuw Only</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link"></a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
             <li class="nav-item" data-level="2"><a href="#1-programma-lijst-maken" class="nav-link">1: Programma Lijst maken</a>
               <ul class="nav flex-column">
               </ul>
@@ -182,7 +178,17 @@
 </tr>
 </tbody>
 </table>
-<h2 id="_1"></h2>
+<pre><code>master detail link ()  parameters van details zetten op master (data) 
+(parameters) -&gt; op de detail
+
+order -&gt;record na onze insert -&gt; resync -&gt; keydataset
+
+autorefresh -&gt;(default true) bij het veranderen van parameters 
+
+alwaysrefresh -&gt;(default false) geen parameter (hoeft geen ) -&gt; navigatie events 
+
+bij update en delete zetten we always refresh uit we willen geen onodige gets uitvoeren
+</code></pre>
 <h2 id="1-programma-lijst-maken">1: Programma Lijst maken</h2>
 <ul>
 <li>!!!!!JUISTE NAAM</li>

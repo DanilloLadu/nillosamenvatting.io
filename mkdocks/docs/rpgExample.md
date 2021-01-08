@@ -6,6 +6,7 @@
 DCL-C       Define a named constant
 DCL-DS      Define a data structure
 END-DS      End a data structure
+
 {DCL-PARM}  Define a parameter
 DCL-PI      Define a procedure interface (dcl-proc end-proc)
 END-PI      End a procedure interface
@@ -18,6 +19,9 @@ DCL-S       Define a standalone field
 ## Declaraties
 
 ```
+INZ		ERROR HANDELING Fouten voorkomen
+QUALIFIED	Voor prefex met data structuur zonder hoef je geen prefix te gebruiken
+
 BINDEC(digits {: decimal-positions})
 CHAR(length)
 DATE{(format{separator})}

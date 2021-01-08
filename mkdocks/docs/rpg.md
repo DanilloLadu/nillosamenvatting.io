@@ -3,8 +3,11 @@
 ```
 .PF     # Physical file		data (kolom omschrijvingen)
 .Lf     # Logic file		view benaderen (keys) 
-								(bepaalt sortering data die opgehaald wordt
-								((her)indexering) (uniek benaderen of niet via UNIQUE)
+						(bepaalt sortering data die opgehaald wordt
+						((her)indexering) (uniek benaderen of niet via UNIQUE)
+						
+LF 		# property naamgeving COMPANY/ORDER - UNIQUE 
+		# Files Uploaden en Compileren en via 
 
 ```
 
@@ -15,6 +18,7 @@
 * `upddta` - Nog een manier om je data te zien
 * `wrkjob` - Active Job Log benaderen (F10 Voor job info, F1 detail, F14 job log) (Shift + F).
 * `wa` - Alle jobs
+* `wop` - naam van programma's en services ophalen
 
 ## Werk Omgeving 
 

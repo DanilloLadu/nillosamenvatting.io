@@ -5,10 +5,10 @@ nav:
         - 'Informatie': 'rpg.md'
         - 'Example': 'rpgExample.md'
     - Jef:
-        - 'License': 'license.md'
-        - 'Release Notes': 'release-notes.md'
+        - 'View only': 'jefViewOnly.md'
+        - 'Create Update Edit Delete': 'jefCrud.md'
 theme:
-  name: material
+  name: cosmo
   palette:
       primary: light green
       scheme: slate
